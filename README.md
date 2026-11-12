@@ -24,4 +24,3 @@ python -m unittest -v          # 32 теста
 | `vfs/remote.py` | расширение: `LazyRemoteFileProxy`, `RemoteStorage` |
 | `main.py` | точка сборки (composition root) и клиентский сценарий |
 | `tests/` | тесты базовой части, расширения и архитектурные проверки |
-| `docs/uml/` | диаграммы классов (`diagrams_gen.py`) и последовательности (`seq_*.puml`) |
