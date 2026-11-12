@@ -1,0 +1,33 @@
+@startuml seq_5_symlink
+!include _style.iuml
+title Обнаружение цикла ссылок: docs/loop -> docs
+actor "Клиент" as C
+participant "docs :\nDirectoryComposite" as D #BBDEFB
+participant "report.docx :\nFileLeaf" as F #BBDEFB
+participant "loop :\nSymbolicLink" as K #E1BEE7
+
+C -> D : print_tree(1)
+activate D
+D -> F : print_tree(2)
+F --> D : "report.docx (120 B)"
+D -> K : print_tree(2)
+activate K
+K -> K : _follow(): _resolving = True
+K -> D : print_tree(3)  — переход к цели
+activate D
+D -> F : print_tree(4)
+F --> D : "report.docx (120 B)"
+D -> K : print_tree(4)
+activate K
+K -> K : _follow(): _resolving уже True\n→ CycleDetectedError
+K -> K : перехват исключения
+K --> D : "loop -> docs [цикл, не раскрывается]"
+deactivate K
+D --> K : поддерево docs
+deactivate D
+K -> K : finally: _resolving = False
+K --> D : "loop -> docs" + поддерево
+deactivate K
+D --> C : текст дерева
+deactivate D
+@enduml

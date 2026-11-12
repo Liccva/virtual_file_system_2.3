@@ -1,0 +1,33 @@
+@startuml seq_1_print_tree
+!include _style.iuml
+title Печать дерева с закрытым каталогом (пользователь olesya)
+actor "Клиент" as C
+participant "root :\nDirectoryComposite" as R #BBDEFB
+participant "docs :\nDirectoryComposite" as D #BBDEFB
+participant "report.docx :\nFileLeaf" as F #BBDEFB
+participant "secret_proxy :\nProtectedNodeProxy" as P #FFE0B2
+participant "access :\nAclAccessService" as A #C8E6C9
+participant "secret :\nDirectoryComposite" as S #BBDEFB
+
+C -> R : print_tree(0)
+activate R
+R -> D : print_tree(1)
+activate D
+D -> F : print_tree(2)
+F --> D : "report.docx (120 B)"
+D --> R : "docs/\n  report.docx (120 B)"
+deactivate D
+R -> P : print_tree(1)
+activate P
+P -> A : is_allowed(olesya, secret, LIST)
+A --> P : False
+note over P, S
+  READ уже не проверяется (короткое замыкание and).
+  Реальный каталог secret не вызывается:
+  размер и имена детей не раскрываются.
+end note
+P --> R : "secret [нет доступа]"
+deactivate P
+R --> C : текст дерева
+deactivate R
+@enduml

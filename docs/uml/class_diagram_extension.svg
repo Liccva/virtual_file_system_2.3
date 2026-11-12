@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1790" height="1138" viewBox="0 0 1790 1138">
+<defs>
+  <marker id="tri" viewBox="0 0 20 20" refX="19" refY="10" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto">
+    <path d="M1,1 L19,10 L1,19 z" fill="#FFFFFF" stroke="#37474F" stroke-width="1.6"/></marker>
+  <marker id="dia" viewBox="0 0 24 12" refX="1" refY="6" markerWidth="22" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto">
+    <path d="M1,6 L12,1 L23,6 L12,11 z" fill="#37474F" stroke="#37474F" stroke-width="1.2"/></marker>
+  <marker id="odia" viewBox="0 0 24 12" refX="1" refY="6" markerWidth="22" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto">
+    <path d="M1,6 L12,1 L23,6 L12,11 z" fill="#FFFFFF" stroke="#37474F" stroke-width="1.4"/></marker>
+  <marker id="arr" viewBox="0 0 14 14" refX="13" refY="7" markerWidth="13" markerHeight="13" markerUnits="userSpaceOnUse" orient="auto">
+    <path d="M1,1 L13,7 L1,13" fill="none" stroke="#37474F" stroke-width="1.6"/></marker>
+</defs>
+<rect width="1790" height="1138" fill="#FFFFFF"/>
+<text x="895.0" y="36" font-family="Arial, Helvetica, sans-serif" font-size="19" text-anchor="middle" font-weight="bold" font-style="normal" fill="#212121" xml:space="preserve">Вариант 2.3. Расширение 2.3.3: SymbolicLink и LazyRemoteFileProxy</text>
+<rect x="30" y="275" width="660" height="118" rx="10" fill="#78909C" fill-opacity="0.16" stroke="#78909C" stroke-width="2" stroke-dasharray="10,6"/>
+<rect x="44" y="380" width="299.90000000000003" height="26" rx="6" fill="#FFFFFF" stroke="#78909C" stroke-width="2"/>
+<text x="56" y="398" font-family="Arial, Helvetica, sans-serif" font-size="13.5" text-anchor="start" font-weight="bold" font-style="normal" fill="#263238" xml:space="preserve">Существующие классы — не менялись</text>
+<rect x="710" y="275" width="1060" height="636" rx="10" fill="#8E24AA" fill-opacity="0.16" stroke="#8E24AA" stroke-width="2" stroke-dasharray="10,6"/>
+<rect x="820" y="898" width="465.90000000000003" height="26" rx="6" fill="#FFFFFF" stroke="#8E24AA" stroke-width="2"/>
+<text x="832" y="916" font-family="Arial, Helvetica, sans-serif" font-size="13.5" text-anchor="start" font-weight="bold" font-style="normal" fill="#263238" xml:space="preserve">Добавлено в 2.3.3 — новые файлы symlink.py, remote.py</text>
+<polyline points="130.0,315 130.0,238 1290.0,238 1290.0,315" fill="none" stroke="#37474F" stroke-width="1.4"/>
+<polyline points="335.0,315 335.0,238" fill="none" stroke="#37474F" stroke-width="1.4"/>
+<polyline points="565.0,315 565.0,238" fill="none" stroke="#37474F" stroke-width="1.4"/>
+<polyline points="895.0,315 895.0,238" fill="none" stroke="#37474F" stroke-width="1.4"/>
+<polyline points="750.0,238 750.0,200" fill="none" stroke="#37474F" stroke-width="1.4" marker-end="url(#tri)"/>
+<rect x="756.0" y="214.5" width="247.20000000000002" height="16.5" fill="#FFFFFF" opacity="0.92"/>
+<text x="760.0" y="226" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#263238" xml:space="preserve">все новые узлы реализуют тот же контракт</text>
+<polyline points="1020,315 1020,140 940,140" fill="none" stroke="#37474F" stroke-width="1.4" marker-start="url(#odia)" marker-end="url(#arr)"/>
+<rect x="944" y="120" width="70.4" height="17" fill="#FFFFFF" opacity="0.92"/>
+<text x="948" y="132" font-family="Arial, Helvetica, sans-serif" font-size="12" text-anchor="start" font-weight="normal" font-style="normal" fill="#263238" xml:space="preserve">_target  1</text>
+<rect x="944" y="150.5" width="169.46" height="16.5" fill="#FFFFFF" opacity="0.92"/>
+<text x="948" y="162" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#263238" xml:space="preserve">цель ссылки (не владеет ею)</text>
+<polyline points="895.0,527 895.0,605" fill="none" stroke="#37474F" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#arr)"/>
+<rect x="901.0" y="559.5" width="151.52" height="16.5" fill="#FFFFFF" opacity="0.92"/>
+<text x="905.0" y="571.0" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#263238" xml:space="preserve">«raise» (повторный вход)</text>
+<polyline points="1290.0,545 1290.0,605" fill="none" stroke="#37474F" stroke-width="1.4" marker-end="url(#arr)"/>
+<rect x="1296.0" y="568.5" width="67.80000000000001" height="16.5" fill="#FFFFFF" opacity="0.92"/>
+<text x="1300.0" y="580.0" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#263238" xml:space="preserve">_storage 1</text>
+<polyline points="1480,373.0 1530,373.0" fill="none" stroke="#37474F" stroke-width="1.4" marker-start="url(#dia)"/>
+<rect x="1482" y="354.0" width="53.760000000000005" height="16" fill="#FFFFFF" opacity="0.92"/>
+<text x="1486" y="365.0" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="start" font-weight="normal" font-style="normal" fill="#263238" xml:space="preserve">0..1 кэш</text>
+<polyline points="1290.0,741 1290.0,681" fill="none" stroke="#37474F" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#tri)"/>
+<rect x="1298.0" y="704.5" width="61.82" height="16.5" fill="#FFFFFF" opacity="0.92"/>
+<text x="1302.0" y="716.0" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#263238" xml:space="preserve">реализует</text>
+<polyline points="1480,643.0 1640.0,643.0 1640.0,411" fill="none" stroke="#37474F" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#arr)"/>
+<rect x="1484" y="623.5" width="55.84" height="16.5" fill="#FFFFFF" opacity="0.92"/>
+<text x="1488" y="635.0" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#263238" xml:space="preserve">«create»</text>
+<polyline points="1480,785.0 1530,785.0" fill="none" stroke="#37474F" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#arr)"/>
+<rect x="1482" y="766.0" width="48.04" height="16" fill="#FFFFFF" opacity="0.92"/>
+<text x="1486" y="777.0" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="start" font-weight="normal" font-style="normal" fill="#263238" xml:space="preserve">«raise»</text>
+<polyline points="795.0,986 795.0,911" fill="none" stroke="#37474F" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#arr)"/>
+<rect x="801.0" y="939.5" width="283.08" height="16.5" fill="#FFFFFF" opacity="0.92"/>
+<text x="805.0" y="951" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#263238" xml:space="preserve">«create»  новые узлы и цепочку Protected(Lazy)</text>
+<rect x="40" y="443" width="630" height="128" rx="6" fill="#FFFDE7" stroke="#B0A060"/>
+<text x="54" y="467" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="bold" font-style="normal" fill="#212121" xml:space="preserve">Цепочка для удалённого файла (собирается в main):</text>
+<text x="54" y="489" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">DirectoryComposite → ProtectedNodeProxy → LazyRemoteFileProxy → RemoteStorage</text>
+<text x="54" y="511" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">Права проверяются снаружи, поэтому при отказе загрузки нет.</text>
+<text x="54" y="533" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">FileLeaf и DirectoryComposite зависят только от FileSystemNode,</text>
+<text x="54" y="555" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">поэтому новые виды узлов встраиваются без их изменения (OCP).</text>
+<rect x="30" y="62" width="470" height="124" rx="6" fill="#FAFAFA" stroke="#90A4AE" stroke-width="1.2"/>
+<text x="44" y="84" font-family="Arial, Helvetica, sans-serif" font-size="13.5" text-anchor="start" font-weight="bold" font-style="normal" fill="#212121" xml:space="preserve">Обозначения</text>
+<rect x="44" y="98" width="26" height="15" fill="#ECEFF1" stroke="#37474F" stroke-width="1"/>
+<text x="80" y="110" font-family="Arial, Helvetica, sans-serif" font-size="12" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">существующий класс, не изменялся</text>
+<rect x="44" y="120" width="26" height="15" fill="#E1BEE7" stroke="#37474F" stroke-width="1"/>
+<text x="80" y="132" font-family="Arial, Helvetica, sans-serif" font-size="12" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">добавлено при расширении</text>
+<rect x="44" y="142" width="26" height="15" fill="#FFF59D" stroke="#37474F" stroke-width="1"/>
+<text x="80" y="154" font-family="Arial, Helvetica, sans-serif" font-size="12" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">изменённый модуль (только точка сборки)</text>
+<rect x="44" y="164" width="26" height="15" fill="#FFE0B2" stroke="#37474F" stroke-width="1"/>
+<text x="80" y="176" font-family="Arial, Helvetica, sans-serif" font-size="12" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">общий контракт</text>
+<rect x="560" y="70" width="380" height="130" rx="3" fill="#FFE0B2" stroke="#37474F" stroke-width="1.3"/>
+<text x="750.0" y="88" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="middle" font-weight="normal" font-style="italic" fill="#455A64" xml:space="preserve">«abstract» · Component / Subject</text>
+<text x="750.0" y="107" font-family="Arial, Helvetica, sans-serif" font-size="14.5" text-anchor="middle" font-weight="bold" font-style="italic" fill="#212121" xml:space="preserve">FileSystemNode</text>
+<line x1="560" y1="118" x2="940" y2="118" stroke="#37474F" stroke-width="1"/>
+<text x="570" y="136" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="italic" fill="#212121" xml:space="preserve">+ size(): int</text>
+<text x="570" y="154" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="italic" fill="#212121" xml:space="preserve">+ print_tree(depth: int = 0): str</text>
+<text x="570" y="172" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="italic" fill="#212121" xml:space="preserve">+ find(name: str): FileSystemNode | None</text>
+<text x="570" y="190" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="italic" fill="#212121" xml:space="preserve">+ contains(node: FileSystemNode): bool</text>
+<rect x="50" y="315" width="160" height="48" rx="3" fill="#ECEFF1" stroke="#37474F" stroke-width="1.3"/>
+<text x="130.0" y="333" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="middle" font-weight="normal" font-style="italic" fill="#455A64" xml:space="preserve">Leaf</text>
+<text x="130.0" y="352" font-family="Arial, Helvetica, sans-serif" font-size="14.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#212121" xml:space="preserve">FileLeaf</text>
+<rect x="230" y="315" width="210" height="48" rx="3" fill="#ECEFF1" stroke="#37474F" stroke-width="1.3"/>
+<text x="335.0" y="333" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="middle" font-weight="normal" font-style="italic" fill="#455A64" xml:space="preserve">Composite</text>
+<text x="335.0" y="352" font-family="Arial, Helvetica, sans-serif" font-size="14.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#212121" xml:space="preserve">DirectoryComposite</text>
+<rect x="460" y="315" width="210" height="48" rx="3" fill="#ECEFF1" stroke="#37474F" stroke-width="1.3"/>
+<text x="565.0" y="333" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="middle" font-weight="normal" font-style="italic" fill="#455A64" xml:space="preserve">Protection Proxy</text>
+<text x="565.0" y="352" font-family="Arial, Helvetica, sans-serif" font-size="14.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#212121" xml:space="preserve">ProtectedNodeProxy</text>
+<rect x="730" y="315" width="330" height="212" rx="3" fill="#E1BEE7" stroke="#37474F" stroke-width="1.3"/>
+<text x="895.0" y="333" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="middle" font-weight="normal" font-style="italic" fill="#455A64" xml:space="preserve">Proxy (ссылка на цель)</text>
+<text x="895.0" y="352" font-family="Arial, Helvetica, sans-serif" font-size="14.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#212121" xml:space="preserve">SymbolicLink</text>
+<line x1="730" y1="363" x2="1060" y2="363" stroke="#37474F" stroke-width="1"/>
+<text x="740" y="381" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">- _target: FileSystemNode</text>
+<text x="740" y="399" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">- _resolving: bool</text>
+<line x1="730" y1="409" x2="1060" y2="409" stroke="#37474F" stroke-width="1"/>
+<text x="740" y="427" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">+ target: FileSystemNode «property»</text>
+<text x="740" y="445" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">+ size(): int</text>
+<text x="1052" y="445" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="end" font-weight="bold" font-style="normal" fill="#BF360C" xml:space="preserve">[0, не следует]</text>
+<text x="740" y="463" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">+ print_tree(depth: int = 0): str</text>
+<text x="1052" y="463" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="end" font-weight="bold" font-style="normal" fill="#BF360C" xml:space="preserve">[следует]</text>
+<text x="740" y="481" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">+ find(name: str): FileSystemNode | None</text>
+<text x="1052" y="481" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="end" font-weight="bold" font-style="normal" fill="#BF360C" xml:space="preserve">[следует]</text>
+<text x="740" y="499" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">+ contains(node): bool</text>
+<text x="740" y="517" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">- _follow()  «contextmanager»</text>
+<rect x="1100" y="315" width="380" height="230" rx="3" fill="#E1BEE7" stroke="#37474F" stroke-width="1.3"/>
+<text x="1290.0" y="333" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="middle" font-weight="normal" font-style="italic" fill="#455A64" xml:space="preserve">Virtual Proxy + кэш метаданных</text>
+<text x="1290.0" y="352" font-family="Arial, Helvetica, sans-serif" font-size="14.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#212121" xml:space="preserve">LazyRemoteFileProxy</text>
+<line x1="1100" y1="363" x2="1480" y2="363" stroke="#37474F" stroke-width="1"/>
+<text x="1110" y="381" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">- _storage: RemoteStorage</text>
+<text x="1110" y="399" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">- _remote_path: str</text>
+<text x="1110" y="417" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">- _metadata: RemoteMetadata | None</text>
+<line x1="1100" y1="427" x2="1480" y2="427" stroke="#37474F" stroke-width="1"/>
+<text x="1110" y="445" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">+ is_loaded: bool «property»</text>
+<text x="1110" y="463" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">+ size(): int</text>
+<text x="1472" y="463" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="end" font-weight="bold" font-style="normal" fill="#BF360C" xml:space="preserve">[загрузка]</text>
+<text x="1110" y="481" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">+ print_tree(depth: int = 0): str</text>
+<text x="1472" y="481" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="end" font-weight="bold" font-style="normal" fill="#BF360C" xml:space="preserve">[загрузка]</text>
+<text x="1110" y="499" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">+ find(name: str): FileSystemNode | None</text>
+<text x="1110" y="517" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">+ contains(node): bool</text>
+<text x="1110" y="535" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">- _load(): RemoteMetadata</text>
+<rect x="1530" y="335" width="220" height="76" rx="3" fill="#E1BEE7" stroke="#37474F" stroke-width="1.3"/>
+<text x="1640.0" y="353" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="middle" font-weight="normal" font-style="italic" fill="#455A64" xml:space="preserve">«dataclass»</text>
+<text x="1640.0" y="372" font-family="Arial, Helvetica, sans-serif" font-size="14.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#212121" xml:space="preserve">RemoteMetadata</text>
+<line x1="1530" y1="383" x2="1750" y2="383" stroke="#37474F" stroke-width="1"/>
+<text x="1540" y="401" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">+ size: int</text>
+<rect x="770.0" y="605" width="250" height="48" rx="3" fill="#E1BEE7" stroke="#37474F" stroke-width="1.3"/>
+<text x="895.0" y="623" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="middle" font-weight="normal" font-style="italic" fill="#455A64" xml:space="preserve">«exception»</text>
+<text x="895.0" y="642" font-family="Arial, Helvetica, sans-serif" font-size="14.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#212121" xml:space="preserve">CycleDetectedError</text>
+<rect x="1100" y="605" width="380" height="76" rx="3" fill="#E1BEE7" stroke="#37474F" stroke-width="1.3"/>
+<text x="1290.0" y="623" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="middle" font-weight="normal" font-style="italic" fill="#455A64" xml:space="preserve">«interface» (ABC)</text>
+<text x="1290.0" y="642" font-family="Arial, Helvetica, sans-serif" font-size="14.5" text-anchor="middle" font-weight="bold" font-style="italic" fill="#212121" xml:space="preserve">RemoteStorage</text>
+<line x1="1100" y1="653" x2="1480" y2="653" stroke="#37474F" stroke-width="1"/>
+<text x="1110" y="671" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">+ fetch_metadata(path: str): RemoteMetadata</text>
+<rect x="1100" y="741" width="380" height="140" rx="3" fill="#E1BEE7" stroke="#37474F" stroke-width="1.3"/>
+<text x="1290.0" y="759" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="middle" font-weight="normal" font-style="italic" fill="#455A64" xml:space="preserve">заглушка сервера без сети</text>
+<text x="1290.0" y="778" font-family="Arial, Helvetica, sans-serif" font-size="14.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#212121" xml:space="preserve">InMemoryRemoteStorage</text>
+<line x1="1100" y1="789" x2="1480" y2="789" stroke="#37474F" stroke-width="1"/>
+<text x="1110" y="807" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">- _objects: dict[str, int]</text>
+<text x="1110" y="825" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">+ requests: list[str]</text>
+<line x1="1100" y1="835" x2="1480" y2="835" stroke="#37474F" stroke-width="1"/>
+<text x="1110" y="853" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">+ put(path: str, size: int)</text>
+<text x="1110" y="871" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">+ fetch_metadata(path: str): RemoteMetadata</text>
+<rect x="1530" y="761" width="220" height="48" rx="3" fill="#E1BEE7" stroke="#37474F" stroke-width="1.3"/>
+<text x="1640.0" y="779" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="middle" font-weight="normal" font-style="italic" fill="#455A64" xml:space="preserve">«exception»</text>
+<text x="1640.0" y="798" font-family="Arial, Helvetica, sans-serif" font-size="14.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#212121" xml:space="preserve">RemoteStorageError</text>
+<rect x="560" y="986" width="470" height="112" rx="3" fill="#FFF59D" stroke="#37474F" stroke-width="1.3"/>
+<text x="795.0" y="1004" font-family="Arial, Helvetica, sans-serif" font-size="11.5" text-anchor="middle" font-weight="normal" font-style="italic" fill="#455A64" xml:space="preserve">«module» · composition root — изменён</text>
+<text x="795.0" y="1023" font-family="Arial, Helvetica, sans-serif" font-size="14.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#212121" xml:space="preserve">main</text>
+<line x1="560" y1="1034" x2="1030" y2="1034" stroke="#37474F" stroke-width="1"/>
+<text x="570" y="1052" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">+ build_extended_tree(access, user, storage): FileSystemNode</text>
+<text x="570" y="1070" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">  cloud.add(ProtectedNodeProxy(LazyRemoteFileProxy(...)))</text>
+<text x="570" y="1088" font-family="Arial, Helvetica, sans-serif" font-size="12.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#212121" xml:space="preserve">  docs.add(SymbolicLink("loop", docs))</text>
+</svg>

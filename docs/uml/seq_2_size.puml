@@ -1,0 +1,39 @@
+@startuml seq_2_size
+!include _style.iuml
+title Запрос размера дерева: отказ и разрешённый доступ
+actor "Клиент" as C
+participant "root :\nDirectoryComposite" as R #BBDEFB
+participant "docs :\nDirectoryComposite" as D #BBDEFB
+participant "secret_proxy :\nProtectedNodeProxy" as P #FFE0B2
+participant "access :\nAclAccessService" as A #C8E6C9
+participant "secret :\nDirectoryComposite" as S #BBDEFB
+participant "passwords.txt :\nFileLeaf" as L #BBDEFB
+
+C -> R : size()
+activate R
+R -> D : size()
+activate D
+D --> R : 150
+deactivate D
+note right of R : photos/ (2048 B) опущен
+R -> P : size()
+activate P
+P -> A : is_allowed(user, secret, READ)
+alt нет права READ (olesya)
+  A --> P : False
+  P -->x R : raise AccessDeniedError
+  R -->x C : AccessDeniedError\n(исключение не перехватывается)
+else право есть (admin)
+  A --> P : True
+  P -> S : size()
+  activate S
+  S -> L : size()
+  L --> S : 300
+  S --> P : 300
+  deactivate S
+  P --> R : 300
+  R --> C : 150 + 2048 + 300 = 2498
+end
+deactivate P
+deactivate R
+@enduml
