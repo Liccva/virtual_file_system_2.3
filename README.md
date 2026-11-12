@@ -8,7 +8,6 @@
 ```
 python main.py                 # демонстрация до и после расширения
 python -m unittest -v          # 32 теста
-python benchmark.py            # замер накладных расходов
 ```
 
 ## Структура
@@ -24,6 +23,5 @@ python benchmark.py            # замер накладных расходов
 | `vfs/symlink.py` | расширение: `SymbolicLink` с контролем циклов |
 | `vfs/remote.py` | расширение: `LazyRemoteFileProxy`, `RemoteStorage` |
 | `main.py` | точка сборки (composition root) и клиентский сценарий |
-| `benchmark.py` | замер: словари / Composite / Composite + Proxy, эффект кэша |
 | `tests/` | тесты базовой части, расширения и архитектурные проверки |
 | `docs/uml/` | диаграммы классов (`diagrams_gen.py`) и последовательности (`seq_*.puml`) |
